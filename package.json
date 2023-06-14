@@ -1,0 +1,35 @@
+{
+  "name": "chatv1",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "emoji-picker-element": "1.12.1",
+    "micromark": "^3.2.0",
+    "micromark-extension-gfm": "^2.0.3",
+    "vue": "^3.3.4",
+    "vue-advanced-chat": "^2.0.7"
+  },
+  "devDependencies": {
+    "@babel/core": "7.12.16",
+    "@typescript-eslint/eslint-plugin": "5.4.0",
+    "@typescript-eslint/parser": "5.4.0",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vue/compiler-sfc": "3.2.22",
+    "@vue/eslint-config-standard": "4.0.0",
+    "@vue/eslint-config-typescript": "9.1.0",
+    "babel-eslint": "10.0.3",
+    "eslint": "7.32.0",
+    "eslint-plugin-vue": "8.0.3",
+    "node-sass": "^8.0.0",
+    "sass": "^1.63.4",
+    "sass-loader": "^13.3.2",
+    "typescript": "4.6.x",
+    "vite": "^4.3.9",
+    "vue-loader": "^16.8.3"
+  }
+}
