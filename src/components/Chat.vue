@@ -46,6 +46,45 @@ export default {
           ],
           typingUsers: [4321],
         },
+        {
+          roomId: '2',
+          roomName: 'Room 1',
+          avatar: 'assets/imgs/people.png',
+          unreadCount: 4,
+          index: 3,
+          lastMessage: {
+            _id: 'xyz',
+            content: 'Last message received',
+            senderId: '1234',
+            username: 'John Doe',
+            timestamp: '10:20',
+            saved: true,
+            distributed: false,
+            seen: false,
+            new: true,
+          },
+          users: [
+            {
+              _id: '1234',
+              username: 'John Doe',
+              avatar: 'assets/imgs/doe.png',
+              status: {
+                state: 'online',
+                lastChanged: 'today, 14:30',
+              },
+            },
+            {
+              _id: '4321',
+              username: 'John Snow',
+              avatar: 'assets/imgs/snow.png',
+              status: {
+                state: 'offline',
+                lastChanged: '14 July, 20:00',
+              },
+            },
+          ],
+          typingUsers: [4321],
+        },
       ],
       messages: [
         {
@@ -107,6 +146,7 @@ export default {
         { name: 'deleteRoom', title: 'Delete Room' },
       ],
       micomponente: 'mi-estilo-personalizado',
+      messagesLoaded: false,
     }
   },
 }
@@ -116,8 +156,11 @@ export default {
     :class="micomponente"
     :current-user-id="currentUserId"
     :rooms="JSON.stringify(rooms)"
+    :rooms-loaded="true"
     :messages="JSON.stringify(messages)"
+    :messages-loaded="messagesLoaded"
     :room-actions="JSON.stringify(roomActions)"
+    @send-message="sendMessage($event.detail[0])"
   />
 </template>
 
